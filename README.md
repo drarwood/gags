@@ -45,20 +45,20 @@ gags  --pheno      -p  [phenotype file]
 #### Running GAGS
 To extract a subset of 1000 people from a phenotype file with mean = 169 and SD = 5:
 ```
-gags --pheno MyPhenoFile.txt --ns 1000 --means 169 --sds 5 --out MyPhenoSubset.txt
+gags --pheno example_data/ExamplePheno.txt --ns 1000 --means 90 --sds 15 --out MyPhenoSubset.txt
 ```
 
 To extract a subset of 1000 people with mean = 169 and SD = 5 AND a subset of 500 people with mean = 160 and SD = 4:
 ```
-gags --pheno MyPhenoFile.txt --ns 1000,500 --means 169,160 --sds 5,4 --out MyPhenoSubset.txt
+gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset.txt
 ```
 Note that if trying to create more than one group then the order of N, mean and SD values need to be respective of each other on the command line.
 
 To create a series of non-identical solutions ensure to inclue the --seed flag:
 ```
-gags --pheno MyPhenoFile.txt --ns 1000,500 --means 169,160 --sds 5,4 --out MyPhenoSubset1.txt --seed 10
-gags --pheno MyPhenoFile.txt --ns 1000,500 --means 169,160 --sds 5,4 --out MyPhenoSubset2.txt --seed 20
-gags --pheno MyPhenoFile.txt --ns 1000,500 --means 169,160 --sds 5,4 --out MyPhenoSubset3.txt --seed 30
+gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset1.txt --seed 10
+gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset2.txt --seed 20
+gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset3.txt --seed 30
 ...
 ```
 
