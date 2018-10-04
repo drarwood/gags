@@ -57,7 +57,7 @@ gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 1
 ```
 To create multiple non-overlapping distributions then the order of N, mean and SD values need to be respective of each other on the command line.
 
-To create a series of non-identical solutions ensure to inclue the --seed flag:
+To repeat the sampling process to create series of non-identical solutions you should use the --seed flag:
 ```
 gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset1.txt --seed 10
 gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset2.txt --seed 20
