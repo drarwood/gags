@@ -46,12 +46,12 @@ gags  --pheno      -p  [phenotype file]
 ```
 
 #### Running GAGS
-To extract a subset of 1000 people from a phenotype file with mean = 169 and SD = 5:
+To extract a subset of 1000 people from the a phenotype file with mean = 90 and sd = 15:
 ```
 gags --pheno example_data/ExamplePheno.txt --ns 1000 --means 90 --sds 15 --out MyPhenoSubset.txt
 ```
 
-To extract a subset of 1000 people with mean = 169 and SD = 5 AND a subset of 500 people with mean = 160 and SD = 4:
+To extract a subset of 1000 people with mean = 90 and sd = 15 and a subset of 1000 people with mean = 110 and SD = 12:
 ```
 gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset.txt
 ```
