@@ -85,7 +85,7 @@ Depending on the mean and SD required, it may be necessary to adjust the initial
 #### Asking for the impossible
 The ability to find a desired set that meets the distribution requirements is dependent on how far away the mean and SD are from the full dataset. Be aware that the further away, the smaller the N as a proportion needs to be in order to maximise the chances of obtaining a solution. For example, if the phenotype mean = 200 and SD = 5 (respectively) in a full dataset  of 500,000, then it will be much harder to find a solution for a subset of 499,999 with mean=150 and SD=4. More guidance on this will be available here shortly.
 
-Note also, the current version is able to sample up to two non-overlapping groups simultaneously with specific means and SDs in an efficient manner when the total N across required groups = N. Creating additional groups simultaneously required the total N of the subsets to be great to be less than the sample size available in the phenotype file. More updates will be made to cater for this.
+Note also, the current version is able to sample up to two non-overlapping groups simultaneously with specific means and SDs in an efficient manner when the total N across required subsets = total N in the phenotype file. Creating additional groups simultaneously requires the total N of the subsets to be less than the sample size available in the phenotype file. More updates will be made to cater for this.
 
 ### Contact 
 Please email me any questions or comments to a.r.wood@exeter.ac.uk
