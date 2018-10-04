@@ -78,7 +78,6 @@ Group ID    Phenotype
 2     D     169
 ...
 ```
-WARNING: if a solution is not found then the best solution is output once the maximum number of iterations has occured. You should check the program output as this will be flagged as a warning.
 
 #### Fine-tuning the algorithm
 Depending on the mean and SD required, it may be necessary to adjust the initial chromosome population size, maximum mutation rate and the maximum number of iterations if it becomes difficult to find a solution. The error for the best solution is output to the console (or log files for HPC). Therefore, you should run GAGS with several tunings of the parameters and compare the error to determine which seems to be the most effective in getting closer to the solution you want. Additional releases of this software will automate this. 
