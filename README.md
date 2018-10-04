@@ -3,12 +3,15 @@
 Written by Andrew Wood - a.r.wood@exeter.ac.uk - Genetics of Complex Traits - University of Exeter
 
 ### Purpose 
-GAGS is a C++ program created to sample data with specific means and standard deviations from large datasets. The original purpose was to select phenotypic distributions from large scale studies, such as the UK Biobank. The current version is able to sample up to two non-overlapping groups simultaneously with specific means and SDs in an efficient manner. However, creating additional groups simultaneously using the current version is not advised but updates will be made to cater for this.
+GAGS is a C++ program created to sample data with specific means and standard deviations from large datasets. The original purpose was to select phenotypic distributions from large scale studies, such as the UK Biobank. 
 
 ### Compiling 
 GAGS can be compiled using the 'make' file provided 
 ```
 make 
+```
+Installation can occur with root permissions or by manually changing the Makefile.
+```
 make install
 ```
 
@@ -52,7 +55,7 @@ To extract a subset of 1000 people with mean = 169 and SD = 5 AND a subset of 50
 ```
 gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 15,12 --out MyPhenoSubset.txt
 ```
-Note that if trying to create more than one group then the order of N, mean and SD values need to be respective of each other on the command line.
+To create multiple non-overlapping distributions then the order of N, mean and SD values need to be respective of each other on the command line.
 
 To create a series of non-identical solutions ensure to inclue the --seed flag:
 ```
@@ -62,7 +65,7 @@ gags --pheno example_data/ExamplePheno.txt --ns 1000,1000 --means 90,110 --sds 1
 ...
 ```
 
-Note that the algorithm will aim to match to the same precision as provided on the command line. 
+Note that the algorithm will aim to match the same precision as provided on the command line after rounding. 
 
 #### Output File
 The output file will contain the group ID individual ID and phenotypic value
@@ -81,7 +84,9 @@ WARNING: if a solution is not found then the best solution is output once the ma
 Depending on the mean and SD required, it may be necessary to adjust the initial chromosome population size, maximum mutation rate and the maximum number of iterations if it becomes difficult to find a solution. The error for the best solution is output to the console (or log files for HPC). Therefore, you should run GAGS with several tunings of the parameters and compare the error to determine which seems to be the most effective in getting closer to the solution you want. Additional releases of this software will automate this. 
 
 #### Asking for the impossible
-The ability to find a desired set that meets the distribution requirements is dependent on how far away the mean and SD are from the full dataset. Be aware that the further away, the smaller the N as a proportion needs to be in order to maximise the chances of obtaining a solution. For example, if the phenotype mean = 200 and SD = 5 (respectively) in a full dataset  of 500,000, then it will be much harder to find a solution for a subset of 499,999 with mean=150 and SD=4. More guidance on this will be available here shortly.
+The ability to find a desired set that meets the distribution requirements is dependent on how far away the mean and SD are from the full dataset. Be aware that the further away, the smaller the N as a proportion needs to be in order to maximise the chances of obtaining a solution. For example, if the phenotype mean = 200 and SD = 5 (respectively) in a full dataset  of 500,000, then it will be much harder to find a solution for a subset of 499,999 with mean=150 and SD=4. More guidance on this will be available here shortly.T
+
+Note also, the current version is able to sample up to two non-overlapping groups simultaneously with specific means and SDs in an efficient manner when the total N across required groups = N. Creating additional groups simultaneously required the total N of the subsets to be great to be less than the sample size available in the phenotype file. More updates will be made to cater for this.
 
 ### Contact 
 Please email me any questions or comments to a.r.wood@exeter.ac.uk
