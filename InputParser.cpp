@@ -28,7 +28,7 @@ void ShowOptions() {
     cout << "      --pheno      -p  [phenotype file]"                    << endl;
     cout << "      --ns         -n  [list of group sizes]"               << endl;
     cout << "      --means      -m  [list of respective means]"          << endl;
-    cout << "      --sds        -s  [list od respective SDs]"            << endl;
+    cout << "      --sds        -s  [list of respective SDs]"            << endl;
     cout << "      --seed       -r  [seed - default 10000]"              << endl;
     cout << "      --mrate      -y  [max mutation rate - default 0.01]"  << endl;
     cout << "      --popsize    -z  [initial solutions - default 10]"    << endl;
