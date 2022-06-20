@@ -17,7 +17,7 @@ make install
 
 #### Input Files
 
-- Phenotype File (required). A tab delimited file containing ordered columns for ID and phenotypic values
+- Phenotype File (required). A tab delimited file containing ordered columns for ID and phenotypic values. Missing data should be either excluded or coded as "NA".
 ```
 ID    PHENO
 A     178
